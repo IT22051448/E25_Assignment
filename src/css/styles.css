@@ -1,0 +1,81 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: rgba(253, 252, 252, 0.955);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #333;
+  position: relative;
+}
+
+.container {
+  text-align: center;
+  max-width: 800px;
+  padding: 2rem;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 2.5rem;
+}
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+.icon-box img {
+  width: 50px;
+  height: 50px;
+}
+.icon-box:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.discover-button {
+  background-color: #e24267;
+  color: white;
+  border: none;
+  padding: 0.8rem 2.5rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.discover-button:hover {
+  background-color: rgb(208.9403669725, 32.0596330275, 72.9633027523);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.discover-button:hover .arrow {
+  transform: translateX(3px);
+}
+.discover-button .arrow {
+  transition: transform 0.2s ease;
+  font-weight: bold;
+}
+
+/*# sourceMappingURL=styles.css.map */
