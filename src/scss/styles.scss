@@ -1,6 +1,6 @@
 @use "sass:color";
 
-// Variables
+// Variables for ideas-page
 $primary-color: #333;
 $secondary-color: #666;
 $box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -8,17 +8,24 @@ $button-color: #e24267;
 $icon-box-size: 80px;
 $icon-size: 50px;
 
-// Base styles
+// Ideas page styles
 body {
   font-family: "Arial", sans-serif;
   background-color: rgba(253, 252, 252, 0.955);
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   color: $primary-color;
+  position: relative;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
   position: relative;
 }
 
@@ -27,6 +34,10 @@ body {
   max-width: 800px;
   padding: 2rem;
   z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h1 {
@@ -41,7 +52,6 @@ h1 {
   margin-bottom: 2.5rem;
 }
 
-// Icon boxes
 .icon-box {
   width: $icon-box-size;
   height: $icon-box-size;
@@ -65,7 +75,6 @@ h1 {
   }
 }
 
-// Button styles
 .discover-button {
   background-color: $button-color;
   color: white;
@@ -93,5 +102,136 @@ h1 {
   .arrow {
     transition: transform 0.2s ease;
     font-weight: bold;
+  }
+}
+
+// Variables for AI Page
+$ai-gradient-start: #b83fb6;
+$ai-gradient-end: #6b1065;
+$ai-text-color: rgb(233, 231, 231);
+
+//AI Page styles
+.ai-page-background {
+  background: linear-gradient(to bottom, $ai-gradient-start, $ai-gradient-end);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.ai-page {
+  position: relative;
+  height: 60vh;
+  color: $ai-text-color;
+
+  .ai-page-background {
+    background: linear-gradient(
+      to bottom,
+      $ai-gradient-start,
+      $ai-gradient-end
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .waves-image {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    object-fit: cover;
+  }
+
+  .grid-image {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 55%;
+    height: 90%;
+    z-index: 1;
+    object-fit: cover;
+    transform: translateY(-30%) translateX(65%);
+    opacity: 0.15;
+  }
+
+  .page-container {
+    position: relative;
+    z-index: 3;
+    height: 100%;
+    display: flex;
+    padding-top: 85px;
+  }
+
+  .content-wrapper {
+    width: 60%;
+    padding-left: 7%;
+    max-width: 1200px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .content-left {
+    max-width: 600px;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+
+  .guide-button {
+    background-color: #bb7fbb;
+    color: $ai-text-color;
+    border: 2px solid #bb7fbb;
+    padding: 0.65rem 1rem;
+    font-size: 1rem;
+    font-weight: semi-bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+      background-color: rgba(255, 89, 252, 0.7);
+    }
+  }
+
+  .image-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 25%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .image1 {
+    width: 80%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 4;
+    transform: translateY(55%) translateX(-90%);
+  }
+
+  .image2 {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+    transform: translateX(-40%);
   }
 }
