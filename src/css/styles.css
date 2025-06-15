@@ -1,4 +1,11 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ideas-page {
   font-family: "Arial", sans-serif;
   background-color: rgba(253, 252, 252, 0.955);
   margin: 0;
@@ -10,15 +17,13 @@ body {
   display: flex;
   flex-direction: column;
 }
-
-.page-container {
+.ideas-page .page-container {
   min-height: 100vh;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
-
-.container {
+.ideas-page .container {
   text-align: center;
   max-width: 800px;
   padding: 2rem;
@@ -28,22 +33,19 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-h1 {
+.ideas-page h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
   font-weight: 600;
 }
-
-.subtitle {
+.ideas-page .subtitle {
   font-size: 1.2rem;
   color: #333;
   margin-bottom: 2.5rem;
 }
-
-.icon-box {
-  width: 80px;
-  height: 80px;
+.ideas-page .icon-box {
+  width: 75px;
+  height: 75px;
   background-color: white;
   display: flex;
   justify-content: center;
@@ -53,16 +55,15 @@ h1 {
   z-index: 2;
   transition: transform 0.3s ease;
 }
-.icon-box img {
-  width: 50px;
-  height: 50px;
+.ideas-page .icon-box img {
+  width: 40px;
+  height: 40px;
 }
-.icon-box:hover {
+.ideas-page .icon-box:hover {
   transform: scale(1.1);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
-.discover-button {
+.ideas-page .discover-button {
   background-color: #e24267;
   color: white;
   border: none;
@@ -76,32 +77,24 @@ h1 {
   align-items: center;
   gap: 0.5rem;
 }
-.discover-button:hover {
+.ideas-page .discover-button:hover {
   background-color: rgb(208.9403669725, 32.0596330275, 72.9633027523);
   transform: translateY(-2px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-.discover-button:hover .arrow {
+.ideas-page .discover-button:hover .arrow {
   transform: translateX(3px);
 }
-.discover-button .arrow {
+.ideas-page .discover-button .arrow {
   transition: transform 0.2s ease;
   font-weight: bold;
 }
 
-.ai-page-background {
-  background: linear-gradient(to bottom, #b83fb6, #6b1065);
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
-}
-
 .ai-page {
+  font-family: "DM Sans", sans-serif;
   position: relative;
-  height: 60vh;
+  height: 25em;
+  width: 100%;
   color: rgb(233, 231, 231);
 }
 .ai-page .ai-page-background {
@@ -127,11 +120,11 @@ h1 {
   top: 30%;
   left: 0;
   width: 55%;
-  height: 90%;
+  height: 80%;
   z-index: 1;
   object-fit: cover;
   transform: translateY(-30%) translateX(65%);
-  opacity: 0.15;
+  opacity: 0.25;
 }
 .ai-page .page-container {
   position: relative;
@@ -158,7 +151,7 @@ h1 {
   font-weight: bold;
 }
 .ai-page .guide-button {
-  background-color: #bb7fbb;
+  background-color: #ae75ae;
   color: rgb(233, 231, 231);
   border: 2px solid #bb7fbb;
   padding: 0.65rem 1rem;
@@ -187,7 +180,8 @@ h1 {
   bottom: 0;
   right: 0;
   z-index: 4;
-  transform: translateY(55%) translateX(-90%);
+  transform: translateY(84.5%) translateX(-90%);
+  overflow: hidden;
 }
 .ai-page .image2 {
   width: 80%;
@@ -196,6 +190,161 @@ h1 {
   right: 0;
   z-index: 3;
   transform: translateX(-40%);
+  overflow: hidden;
+}
+
+.feedback-page {
+  background: linear-gradient(to bottom, #6595ed 0.01%, #ffffff 20%);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  font-family: "DM Sans", sans-serif;
+}
+.feedback-page .page-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
+  z-index: 2;
+}
+.feedback-page .content-wrapper {
+  text-align: center;
+  max-width: 800px;
+  position: relative;
+  margin-top: 2rem;
+}
+.feedback-page .button {
+  background-color: #ff6600;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.feedback-page .button:hover {
+  background-color: #e55b00;
+}
+.feedback-page .image-container {
+  position: absolute;
+  left: 0;
+  top: 5%;
+  height: 100%;
+  width: 100%;
+}
+.feedback-page .wave-image {
+  object-fit: cover;
+  position: absolute;
+}
+.feedback-page .rectangle {
+  position: absolute;
+  top: 25%;
+  left: 10%;
+  width: 270px;
+  height: 290px;
+  background-color: white;
+  border: 8px solid transparent;
+  border-radius: 12px;
+  box-shadow: 0 0 0 8px rgba(172, 185, 212, 0.4);
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 20px;
+  flex-direction: column;
+}
+.feedback-page .rectangle img {
+  width: 150px;
+  height: auto;
+  margin-left: 50px;
+  margin-bottom: 30px;
+}
+.feedback-page .horizontal-line {
+  width: 80%;
+  border-top: 1px solid rgba(163, 165, 168, 0.4470588235);
+  margin: 5px 0;
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.feedback-page .rating-container {
+  text-align: center;
+  display: inline-block;
+}
+.feedback-page .rating-container h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  display: inline;
+  margin-left: 30px;
+  vertical-align: top;
+}
+.feedback-page .stars {
+  display: inline;
+  margin-left: 5px;
+  vertical-align: bottom;
+}
+.feedback-page .star {
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
+  display: inline-block;
+}
+.feedback-page .star.gold {
+  background-color: rgb(174, 155, 46);
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.feedback-page .star.gray {
+  background-color: gray;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+.feedback-page .arrow-left,
+.feedback-page .arrow-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  z-index: 4;
+  color: rgba(128, 128, 128, 0.5921568627);
+  stroke-width: 0.75;
+  stroke: currentColor;
+  fill: none;
+}
+.feedback-page .arrow-left:hover,
+.feedback-page .arrow-right:hover {
+  color: #808080;
+}
+.feedback-page .arrow-left {
+  left: -80px;
+}
+.feedback-page .arrow-right {
+  right: -80px;
+}
+.feedback-page .text-container {
+  position: absolute;
+  right: 5%;
+  top: 35%;
+  width: 45%;
+  padding-left: 2rem;
+  z-index: 2;
+}
+.feedback-page .text-container h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 1rem;
+}
+.feedback-page .text-container p {
+  font-size: 1.2rem;
+  color: #333;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=styles.css.map */

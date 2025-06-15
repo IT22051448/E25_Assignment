@@ -14,5 +14,5 @@ const loadPageContent = (pageId, pageUrl) => {
 window.addEventListener("DOMContentLoaded", () => {
   loadPageContent("page1", "pages/ideas-page.html");
   loadPageContent("page2", "pages/ai-page.html");
-  loadPageContent("page3", "pages/ideas-page2.html");
+  loadPageContent("page3", "pages/feedback.html");
 });
