@@ -12,7 +12,8 @@ const loadPageContent = (pageId, pageUrl) => {
 
 // When the page is loaded, load content for each page
 window.addEventListener("DOMContentLoaded", () => {
-  loadPageContent("page1", "pages/ideas-page.html");
-  loadPageContent("page2", "pages/ai-page.html");
-  loadPageContent("page3", "pages/feedback.html");
+  loadPageContent("ideas", "pages/ideas-page.html");
+  loadPageContent("ai", "pages/ai-page.html");
+  loadPageContent("feedback", "pages/feedback.html");
+  loadPageContent("connect", "pages/connect-page.html");
 });
